@@ -18,9 +18,9 @@ li {
 	background-color: rgb(26,26,26);
 	color: white;
 	border-bottom: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 16px;
 	margin-right: 20px;
-	border-radius: 25px;
+	border-radius: 16px;
 }
 
 li a {
