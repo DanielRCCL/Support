@@ -109,7 +109,7 @@ input[type=text]:focus {
   	border: 1px solid #555; /* Add a grey border */
   	margin-bottom: 12px; /* Add some space below the input */
   	margin-left: 25%;
-	border-radius: 25px;
+	border-radius: 8px;
 	background-color: #333;
 	list-style-position: inside
 	color: #ebebeb;
