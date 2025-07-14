@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+ <link rel="stylesheet" href="style.css">
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("p")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</head>
+<body>
+ <div class="header">
+  <p class="footer-text">L'ensemble des changements de la boite mail <span class="bold">support</span> sont mentionnés ici. Ce site sera mis à jour au fur et à mesure.</br>En cas de questions, contactez <span class="bold">Daniel RCCL</span></p>
+ </div>
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher une info">
+ <h3>Changements fais sur la boite mail</h3>
+ <ul id="myUL">
+  <li><a href="#"><span class="bold date">11 Juillet</span></br><p><span class="new"></span>- Création du groupe ARCCL(Agents RCCL) pour l'envoi facile d'emails groupés à nos agents.</br><span class="new"></span>- Création du groupe SRCCL(Supports RCCL) pour l'envoi facile d'emails groupés aux supports.</a></p></li>
+  <li><a href="#"><span class="bold date">10 Juillet</span></br><p><span class="new"></span>- Ajout de la compagnie Tropic Voyages</br><span class="change"></span>- Changement du dossier <span class="bold">Barbara</span> en <span class="bold">#ROYAL</span></a></p></li>
+  <li><a href="#"><span class="bold date">09 Juillet</span></br><p><span class="change"></span>- Modification noms de dossiers pour les compagnies de croisière (pas les agences) afin de les retrouver en haut de la liste.
+	<span class="bold">#AZAMARA, #CRYSTAL, #HOLLANDAMERICA, #PRINCESS, #SEABOURN, #SILVERSEA, #VIRGIN</span> afin que ces dossiers soient en haut dans l'interface.</a></p></li>
+ </ul>
+</body>
+
+
+</html>
